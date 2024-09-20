@@ -1,11 +1,15 @@
 
 
-body{
-    background-color: #f7ecde;
-}
 
+::selection{background-color: #fec260;}
 .body-book{
     border-block: dotted ;
+}
+section{
+    background-color: #f7ecde;
+    width: 10px;
+    height: 10px;
+    margin: auto;
 }
 h2{
     position: relative;
@@ -63,4 +67,10 @@ h2:hover::before{
 .btn-visit:hover{
     background-color: #9eb23b;
     color: #fff;
+}
+.w-mass{
+    width:500px;
+}
+.home-mass{
+    background-color: #0007;
 }

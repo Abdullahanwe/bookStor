@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-<div class="container pt-5 d-flex align-items-center flex-column  ">
+    <section>
+<div class="container position-relative pt-5 d-flex align-items-center flex-column  ">
+    <h3 class="position-absolute start-0 fs-4 rounded-3 s-h3" >Abdullah Anwer</h3>
     <h2 class="text-center pt-5 f-h2 d-inline-block text-center">Bookmarker</h2>
     <div class="body-book py-5 d-flex align-items-center flex-column w-100 mt-5">
         <h3  class="text-center py-4 s-h3">
@@ -25,13 +26,14 @@
             <label for="sitName" class="pb-2">
                 <i class="fa-solid fa-book"></i>
                 Sit Name</label>
-            <input oninput="vailadatInputs(this)" id="bookName"  class="form-control " type="text" placeholder="Bookmark Name">
+            <input oninput="vailadatInputs(this)" id="bookName"  class="form-control" type="text" placeholder="Bookmark Name"/>
         </div>
+        
         <div class="continer d-flex flex-column w-100 pt-3 fw-bold">
             <label for="sitName" class="pb-2">
                 <i class="fa-solid fa-link"></i>
                 Site URL</label>
-            <input oninput="vailadatInputs(this)" id="linkBook" class=" form-control " type="text" placeholder="Website URL">
+            <input oninput="vailadatInputs(this)" id="linkBook" class=" form-control " type="text" placeholder="Website URL"/>
         </div>
         <button onclick="addBook()" class="btn btn-submit px-5 mt-4 d-flex justify-content-center align-items-center">Submit</button>
     </div>
@@ -49,7 +51,21 @@
         </tbody>
     </table>
 </div>
-
+<div id="btnClose" onclick="btnClose()"  class="home-mass position-absolute start-0 top-0 w-100 h-100 d-none justify-content-center align-items-center">
+    <div id="stopProp" class="mass bg-light w-mass p-4 rounded-3">
+        <header class="d-flex justify-content-between">
+            <span><i class="fa-solid fa-circle text-danger fs-5"></i><i class="fa-solid fa-circle mx-2 text-warning fs-5"></i><i class="fa-solid fa-circle text-success fs-5"></i>  </span>
+           <a class="btn" onclick="btnClose()" > <i class="fa-solid fa-xmark fs-2"></i></a>
+        </header>
+        <span class="pt-4">
+            <h3>Site Name or Url is not valid, Please follow the rules below :</h3>
+            <h6> <i class="fa-regular fa-circle-right text-danger"></i> Site name must contain at least 3 characters</h6>
+            <h6> <i class="fa-regular fa-circle-right text-danger"></i> Site URL must be a valid one</h6>
+        </span>
+    </div>
+</div>
+</section>
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
